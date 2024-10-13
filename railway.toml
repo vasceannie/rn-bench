@@ -1,0 +1,6 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "bench init frappe-bench --ignore-exist && cd frappe-bench && bench new-site mysite.com --admin-password admin && bench --site mysite.com install-app erpnext"
